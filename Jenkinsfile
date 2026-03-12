@@ -9,6 +9,23 @@ pipeline {
                 sh 'mvn clean package -DskipTests'
             }
         }
+        stage('Clone Code') {
+            steps {
+                git 'https://github.com/GREESHMA259/springproject.git'
+            }
+        }
+
+        stage('Build Docker Image') {
+            steps {
+                sh 'docker build -t springboot-app .'
+            }
+        }
+
+        stage('Run Container') {
+            steps {
+                sh 'docker-compose up -d'
+            }
+        }
         stage('Deploy') {
             steps {
                 sh '''
