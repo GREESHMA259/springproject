@@ -13,15 +13,10 @@ pipeline {
             steps {
                 sh 'docker build -t springboot-app .'
             }
-        }
-        stage('Build Docker Image') {
-            steps {
-                sh 'docker build -t springboot-app .'
-            }
-        }   
+        }  
         stage('Deploy Containers') {
             steps {
-                sh 'docker compose up -d'
+                sh 'docker-compose up -d'
             }
         }
         stage('Deploy') {
