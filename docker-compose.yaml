@@ -21,7 +21,7 @@ services:
     depends_on:
       - mysql
     ports:
-      - "8080:8085"
+      - "8085:8085"
     environment:
       SPRING_DATASOURCE_URL: jdbc:mysql://13.203.154.167:3306/appdb
       SPRING_DATASOURCE_USERNAME: root
