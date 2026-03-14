@@ -23,7 +23,7 @@ services:
     ports:
       - "8085:8085"
     environment:
-      SPRING_DATASOURCE_URL: jdbc:mysql://65.0.20.91:3306/appdb
+      SPRING_DATASOURCE_URL: jdbc:mysql://13.203.154.167:3306/appdb
       SPRING_DATASOURCE_USERNAME: root
       SPRING_DATASOURCE_PASSWORD: 1234
 
