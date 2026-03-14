@@ -18,13 +18,8 @@ pipeline {
             steps {
                 sh 'docker build -t springboot-app .'
             }
-        }        
-        stage('Run Container') {
-            steps {
-                sh 'docker-compose up -d'
-            }
-        }
-         stage('Deploy Containers') {
+        }   
+        stage('Deploy Containers') {
             steps {
                 sh 'docker compose up -d'
             }
